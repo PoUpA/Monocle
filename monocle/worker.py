@@ -1287,7 +1287,9 @@ class Worker:
         encounter_conf = conf.ENCOUNTER
         encounter_whitelisted = (encounter_conf == 'all'
                 or (encounter_conf == 'some'
-                    and sighting['pokemon_id'] in conf.ENCOUNTER_IDS))
+                    and sighting['pokemon_id'] in conf.ENCOUNTER_IDS)
+                or (encounter_conf == 'exclude'
+                    and sighting['pokemon_id'] not in conf.ENCOUNTER_EXCLUDE_IDS))
         should_notify_with_iv = (should_notify and not conf.IGNORE_IVS)
         return (encounter_whitelisted or should_notify_with_iv)
 

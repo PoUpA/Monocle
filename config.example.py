@@ -188,9 +188,11 @@ INCUBATE_EGGS = True      # incubate eggs if available
 ## valid options:
 # 'all' will encounter every Pokémon that hasn't been already been encountered
 # 'some' will encounter Pokémon if they are in ENCOUNTER_IDS or eligible for notification
+# 'exclude' will encounter Pokémon  every Pokémon that hasn't been already been encountered if they are not in ENCOUNTER_RXCLUDE_IDS
 # None will never encounter Pokémon
 ENCOUNTER = None
 #ENCOUNTER_IDS = (3, 6, 9, 45, 62, 71, 80, 85, 87, 89, 91, 94, 114, 130, 131, 134)
+#ENCOUNTER_EXCLUDE_IDS = (10,11,13,14,16,17,19,20,21,23,29,32,39,41,43,46,48,52,54,72,79,90,96,98,116,118,120,122,161,163,165,166,167,168,177,178,183,185,187,190,194,198,200,216,220,223,261,263,353,355)
 
 # PokéStops
 SPIN_POKESTOPS = True  # spin all PokéStops that are within range
